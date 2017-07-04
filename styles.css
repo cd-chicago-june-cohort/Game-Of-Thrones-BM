@@ -1,0 +1,26 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+}
+
+#header {
+    font-size: 60px;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+.picbox {
+    display: inline;
+    border: 8px solid black;
+    margin: 5px;
+    width: 300px;
+    height: 220px;
+}
+
+h2 {
+    margin: 20px;
+}
