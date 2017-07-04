@@ -1,25 +1,16 @@
-//baratheon = houses/15
-//lannister = houses/229
-//stark = houses/362
-//targaryen = houses/378
-//http://anapioficeandfire.com/api/
 
 $(document).ready(function() {
 console.log('NOW READY')
  
-    // var name;
-    // var num = 1
-      
-    $('img').click(function(){
+        $('img').click(function(){
         $('#houseTitles').html('');
         id = $(this).attr('id');
 
         var url = 'http://anapioficeandfire.com/api/houses/' + id;
+
+        // CORS Anywhere is a NodeJS reverse proxy which adds CORS headers to the proxied request.
         var cors = 'https://cors-anywhere.herokuapp.com/';
-
-        
-
-
+      
         $.get(cors + url, function(info) {
 
             var name = info.name;
@@ -36,12 +27,9 @@ console.log('NOW READY')
                 $('#houseTitles').append('<li></h4>' + titles[i] + '</h3></li>');
                 console.log(titles);
             };
-
-            
-         
-                
-            
+                  
           }, 'json');
-    
+
     });
+    
 });
